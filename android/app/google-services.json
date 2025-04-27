@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "218836573790",
+    "project_id": "chat-gpt-200a4",
+    "storage_bucket": "chat-gpt-200a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218836573790:android:9e34b3136bc3277afcdecf",
+        "android_client_info": {
+          "package_name": "com.example.chat_gpt_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Fi80Q-6ww50RFpki3gZsUPIki40bL2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218836573790:android:6b081b1f03a52c47fcdecf",
+        "android_client_info": {
+          "package_name": "com.example.chat_gpt_app_updated"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Fi80Q-6ww50RFpki3gZsUPIki40bL2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218836573790:android:ecca6055e4809f85fcdecf",
+        "android_client_info": {
+          "package_name": "com.example.chatbotapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Fi80Q-6ww50RFpki3gZsUPIki40bL2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
