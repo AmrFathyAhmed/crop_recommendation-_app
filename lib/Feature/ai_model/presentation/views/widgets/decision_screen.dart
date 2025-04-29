@@ -6,8 +6,15 @@ import '../../../../Home/presentation/views/widgets/home_view.dart';
 
 
 class DecisionScreen extends StatelessWidget {
-  const DecisionScreen({super.key});
-
+  const DecisionScreen({super.key, required this.phLevel, required this.nitrogen, required this.phosphorus, required this.potassium, required this.temperature, required this.rainfall, required this.humidity, required this.Predict});
+  final double phLevel;
+  final double nitrogen;
+  final double phosphorus;
+  final double potassium;
+  final double temperature;
+  final double rainfall;
+  final double humidity;
+  final String Predict;
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -57,7 +64,7 @@ class DecisionScreen extends StatelessWidget {
                 ],
               ),
                 SizedBox(height: 20),
-                const DecisionCard(),
+                 DecisionCard(Predict:" $Predict",),
                 SizedBox(height: 20),
                 Text(
                   "The Data",
@@ -72,18 +79,20 @@ class DecisionScreen extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      DataCard(title: "PH", value: "6.5", imagePath: "assets/image/Rectangle.png"),
+                      DataCard(title: "PH", value: "$phLevel", imagePath: "assets/image/Rectangle.png"),
                       SizedBox(width: 10),
-                      DataCard(title: "Temperature", value: "60", imagePath: "assets/image/Rectangle.png"),
-                      DataCard(title: "PH", value: "6.5", imagePath: "assets/image/Rectangle.png"),
+                      DataCard(title: "Temperature", value: "$temperature", imagePath: "assets/image/Rectangle.png"),
                       SizedBox(width: 10),
-                      DataCard(title: "Temperature", value: "60", imagePath: "assets/image/Rectangle.png"),
-                      DataCard(title: "PH", value: "6.5", imagePath: "assets/image/Rectangle.png"),
+                      DataCard(title: "Nitrogen", value: "$nitrogen", imagePath: "assets/image/Rectangle.png"),
                       SizedBox(width: 10),
-                      DataCard(title: "Temperature", value: "60", imagePath: "assets/image/Rectangle.png"),
-                      DataCard(title: "PH", value: "6.5", imagePath: "assets/image/Rectangle.png"),
+                      DataCard(title: "Potassium", value: "$potassium", imagePath: "assets/image/Rectangle.png"),
                       SizedBox(width: 10),
-                      DataCard(title: "Temperature", value: "60", imagePath: "assets/image/Rectangle.png"),
+                      DataCard(title: "Phosphorus", value: "$phosphorus", imagePath: "assets/image/Rectangle.png"),
+                      SizedBox(width: 10),
+                      DataCard(title: "Humidity", value: "$humidity", imagePath: "assets/image/Rectangle.png"),
+                      SizedBox(width: 10),
+                      DataCard(title: "Rainfall", value: "$rainfall", imagePath: "assets/image/Rectangle.png"),
+
                     ],
                   ),
                 ),
@@ -113,12 +122,12 @@ class AppColors {
 
 
 class DecisionCard extends StatelessWidget {
-  const DecisionCard({super.key});
-
+  const DecisionCard({super.key, required this.Predict});
+final String Predict;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 400/230,
+      aspectRatio: 400/270,
       child: Container(
         width: double.infinity,
         padding: EdgeInsets.all(20),
@@ -139,7 +148,7 @@ class DecisionCard extends StatelessWidget {
             )
             ,SizedBox(height: 30),
            Container(
-             width: MediaQuery.sizeOf(context).width*.5,
+             width: MediaQuery.sizeOf(context).width*.55,
              height:MediaQuery.sizeOf(context).width*.2 ,
              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 30),
              decoration: BoxDecoration(
@@ -148,9 +157,9 @@ class DecisionCard extends StatelessWidget {
              ),
              child: Center(
                child: Text(
-                 "Tomato",
+                 Predict,
                  style: TextStyle(
-                   fontSize: 22,
+                   fontSize: 20,
                    fontWeight: FontWeight.bold,
                    color: Color(0xffBCFF00),
                  ),
@@ -232,7 +241,7 @@ class AccuracyCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: Text(
-              "95%",
+              "98%",
               style: GoogleFonts.poppins (color: Colors.black, fontSize: 14),
             ),
           ),
@@ -268,7 +277,9 @@ class CustomButton extends StatelessWidget {
             ),
             padding: EdgeInsets.symmetric(vertical: 14),
           ),
-          onPressed: onPressed,
+          onPressed: (){
+            Navigator.pop(context);
+          },
           child: Row(
 
             mainAxisAlignment: MainAxisAlignment.center,

@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String assetsImageGroup1000004736 = 'assets/image/Group1000004736.svg';
   static const String assetsImageLock = 'assets/image/lock.svg';
   static const String assetsImageProfile = 'assets/image/profile.svg';
   static const String fontsAlmaraiRegular = 'assets/Fonts/Almarai-Regular.ttf';
@@ -24,7 +25,7 @@ class Assets {
   static const String imageDollarCircleBold = 'assets/image/dollar-circle-bold.svg';
   static const String imageFilter = 'assets/image/filter.svg';
   static const String imageGroup = 'assets/image/Group.svg';
-  static const String imageGroup1000004736 = 'assets/image/Group1000004736.svg';
+  static const String imageGroup1000004736 = 'assets/image/Group1000004736.png';
   static const String imageGroup1000004738 = 'assets/image/Group1000004738.svg';
   static const String imageInfoCircle = 'assets/image/info-circle.svg';
   static const String imageLock = 'assets/image/Lock.png';
@@ -53,6 +54,7 @@ class Assets {
   static const String imageVector1 = 'assets/image/Vector-1.svg';
   static const String imageWelcomeBG = 'assets/image/welcomeBG.svg';
   static const String imageWelcomeImage = 'assets/image/welcome_image.svg';
-  static const String modelCropModel = 'assets/model/crop_model.tflite';
+  static const String modelCropLabelEncoder = 'assets/model/crop_label_encoder.pkl';
+
 
 }

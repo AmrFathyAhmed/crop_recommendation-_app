@@ -11,6 +11,7 @@ import 'Feature/Home/presentation/manger/providers/chats_provider.dart';
 import 'Feature/Home/presentation/manger/providers/models_provider.dart';
 import 'Feature/Home/presentation/views/chat_screen.dart';
 import 'Feature/Home/presentation/views/widgets/home_view.dart';
+import 'Feature/Home/presentation/views/widgets/test.dart';
 import 'Feature/OnBoarding/presentation/views/widgets/on_boarding_view.dart';
 import 'Feature/Splash/presentation/view/splash_view.dart';
 import 'Feature/ai_model/presentation/views/ai_send_info_view.dart';
@@ -56,8 +57,8 @@ class MyApp extends StatelessWidget {
         ],
         child: MaterialApp(
           routes: {
-            "HomeView": (context) => const ChatScreen(),
-            "LoginView": (context) => const LoginPage(),
+            "HomeView": (context) => const HomeView(),
+            "LoginView": (context) => const WelcomeScreen(),
           },
           title: 'Flutter ChatBOT',
           debugShowCheckedModeBanner: false,
@@ -70,7 +71,7 @@ class MyApp extends StatelessWidget {
               appBarTheme: AppBarTheme(
                 color: cardColor,
               )),
-          home: const AiSendInfoView(),
+          home: SplashView(),
         ),
       ),
     );

@@ -49,6 +49,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   curved_navigation_bar: ^1.0.6
+  image_picker: ^1.1.2
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:
@@ -59,7 +61,7 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/image/Group1000004736.svg"
+  image_path: "assets/image/Group1000004736.png"
 
 
   # The "flutter_lints" package below contains a set of recommended lints to
