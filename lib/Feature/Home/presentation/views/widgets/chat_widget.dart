@@ -147,8 +147,8 @@ class ChatWidget2 extends StatelessWidget {
                   .width * 0.5;
 
               // Use IntrinsicWidth if necessary
-              return exceedsHalfScreen && chatIndex == 0
-                  ? Row(mainAxisAlignment: MainAxisAlignment.end,
+              return  chatIndex == 0
+                  ?exceedsHalfScreen ? Row(mainAxisAlignment: MainAxisAlignment.end,
 
                 children: [
                   IntrinsicWidth(
@@ -180,6 +180,41 @@ class ChatWidget2 extends StatelessWidget {
                             ),
                           ],
                         ),
+                      ),
+                    ),
+                  ),
+                ],
+              ):Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    width: MediaQuery.sizeOf(context).width*.7,
+                    decoration: BoxDecoration(
+                      color: chatIndex == 0
+                          ? const Color(0xff526E04)
+                          : const Color(0xff272727),
+                      borderRadius: BorderRadius.only(topRight: Radius
+                          .circular(8),
+                          topLeft: Radius.circular(8),
+                          bottomRight: chatIndex == 0
+                              ? Radius.circular(0)
+                              : Radius.circular(8),
+                          bottomLeft: chatIndex == 0
+                              ? Radius.circular(8)
+                              : Radius.circular(0)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(14.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: TextWidget(
+                              label: msg,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
